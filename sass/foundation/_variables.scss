@@ -1,0 +1,48 @@
+// ブレイクポイント
+$breakpoint-sp: 767px;
+$breakpoint-tablet: 768px;
+$breakpoint-pc: 1200px;
+$breakpoint-l-pc: 1440px;
+
+// カラーパレット
+//背景色
+$c-black: #555555;
+$c-black-line: #333333;
+$c-black-70: rgba(0, 0, 0, 0.7);
+$c-black-20: rgba(0, 0, 0, 0.2);
+$c-kb-news-bg: rgba(37, 37, 37, 0.8);
+$c-white: #ffffff;
+$c-gray: rgba(242, 242, 242, 1);
+$c-gray-40: rgba(242, 242, 242, .8);
+$c-wa-pink: #EEBBCB;
+$c-wa-purple: #C0A2C7;
+$c-wa-green: #E0EBAF;
+$c-wa-gray: #E5E4E6;
+$c-wa-beige: #F8F4E6;
+$c-wa-orenge: #FCD575;
+
+// フォントサイズ
+$font-size-base: 16px;
+$font-size-xs: 10px;
+$font-size-sm: 14px;
+$font-size-md: 20px;
+$font-size-lg: 24px;
+$font-size-xl: 32px;
+
+// セクションの高さ
+$sp-header-height: 60px;
+$pc-header-height: 200px
+// $footer-height: 150px;
+
+//幅
+// $sidebar-width: 368px;
+
+//幅 max-width
+// $sp-max-width: 475px;
+// $tablet-max-width:765px;
+
+// $sp-card-max-width: 475px;
+// $tablet-card-max-width:475px;
+// $pc-card-max-width:615px;
+
+

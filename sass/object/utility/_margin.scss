@@ -1,0 +1,15 @@
+@use "../../foundation/forwards" as *;
+
+.u-mt-64px{
+  margin-top: 64px;
+}
+.u-mb-100{
+  margin-bottom: 100px;
+}
+.u-ml-auto{
+  margin-left: auto;
+}
+
+.u-fs-ml{
+  font-size: $font-size-md;
+}

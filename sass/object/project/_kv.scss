@@ -1,0 +1,65 @@
+@use "../../foundation/forwards" as *;
+
+.p-kv {
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $c-black-20;
+  }
+  &__logo {
+    position: absolute;
+    width: 45%;
+    min-width: 170px;
+    max-width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+  }
+
+  &__news {
+    position: absolute;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: $c-kb-news-bg;
+    right: 0;
+    bottom: 16px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    z-index: 100;
+    & .c-news-text,
+    & .c-date {
+      color: white;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $c-white;
+    text-align: center;
+    padding: 8px 0;
+    z-index: 100;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $c-black-70;
+      z-index: -100;
+      top: 0;
+    }
+  }
+}

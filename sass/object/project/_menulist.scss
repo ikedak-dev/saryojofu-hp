@@ -1,0 +1,15 @@
+@use "../../foundation/forwards" as *;
+
+.p-menu-list {
+  &__cardList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    place-items: center;
+    @include breakpoint(tablet) {
+    }
+
+    @include breakpoint(pc) {
+    }
+  }
+}

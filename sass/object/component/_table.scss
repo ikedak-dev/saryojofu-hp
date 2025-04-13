@@ -1,0 +1,19 @@
+@use "../../foundation/forwards" as *;
+
+.c-info-table {
+  &__body{
+    display: flex;
+    flex-direction: column;
+  }
+  &__row {
+    border-bottom: 1px solid $c-black;
+  }
+  &__cell {
+    padding: 8px;
+    background-color: white; 
+
+    &--title{
+      width: 120px;
+    }
+  }
+}

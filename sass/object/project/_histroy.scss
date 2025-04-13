@@ -1,0 +1,137 @@
+@use "../../foundation/forwards" as *;
+
+.p-history {
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__content {
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 4.27%;
+
+    @include breakpoint(tablet) {
+      padding: 0;
+    }
+
+    & .c-history-card {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.p-era {
+  padding: 0 4.27%;
+  width: 45.63%;
+  margin: 0 auto;
+
+  @include breakpoint(tablet) {
+    padding: 0;
+
+    &--left {
+      margin: 0 auto 0 4.27%;
+    }
+    &--right {
+      margin: 0 4.27% 0 auto;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    @include breakpoint(tablet) {
+      margin-bottom: 50px;
+
+      &--flex {
+        flex-direction: row;
+      }
+
+      &--flex-reverse {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+  &__label {
+    display: flex;
+    min-width: 200px;
+    height: 60px;
+    border: 1px solid $c-black;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    font-size: 30px;
+    position: relative;
+  }
+
+  &__line {
+    display: block;
+    width: 1px;
+    height: 50px;
+    background-color: $c-black;
+
+    &--center {
+      @include breakpoint(tablet) {
+        position: absolute;
+        top: 100%;
+        height: 1240px;
+      }
+    }
+    &--right {
+      @include breakpoint(tablet) {
+        width: 100%;
+        height: 1px;
+      }
+    }
+    &--left {
+      @include breakpoint(tablet) {
+        width: 100%;
+        height: 1px;
+      }
+    }
+  }
+}
+
+.p-era-current {
+  position: relative;
+  width:100vw;
+  background-image: url("../images/Exterior-6.jpeg");
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $c-white;
+  gap: 24px;
+  padding: 40px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $c-black-20;
+  }
+  &__label {
+    display: flex;
+    width: 220px;
+    height: 60px;
+    border: 1px solid $c-white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    font-size: 30px;
+    position: relative;
+    z-index: 100;
+  }
+
+  &__desc {
+    position: relative;
+    z-index: 100;
+    text-align: center;
+    max-width: 800px;
+  }
+}

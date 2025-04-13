@@ -1,0 +1,21 @@
+@use "../../foundation/forwards" as *;
+
+
+.swiper{
+    width: 100%;
+    padding-left: 4.27%;
+}
+
+.swiper-slide {
+    width: 300px; /* スライドの幅を300pxに固定 */
+
+    &--menu{
+        min-width: 400px; 
+    }
+}
+
+.swiper-gallary {
+    width: 100%; /* スワイパーの幅を100%に設定 */
+    padding: 0;  /* 余白をゼロに */
+}
+

@@ -1,0 +1,66 @@
+@use "../../foundation/forwards" as *;
+
+.p-nav {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  @include breakpoint(sp) {
+    height: 100vh;
+    background-color: $c-black-70;
+    color: $c-white;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+  }
+
+  &__logo {
+    margin: 32px auto 0;
+  }
+
+  &__list {
+    position: relative;
+    gap: 24px;
+    @include breakpoint(sp) {
+      gap: 0px;
+      margin: 100px auto;
+      overflow: hidden;
+    }
+    &--sub {
+      @include breakpoint(tablet) {
+        position: absolute;
+        top: 100%;
+        background-color: $c-gray-40;
+      }
+      overflow: hidden;
+      z-index: 10;
+      margin: 0 0 0 8px;
+      max-height: 0px;
+      transition: all 0.5s ease-in;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 0 8px;
+      &.is-active {
+        max-height: 500px;
+      }
+    }
+  }
+}
+
+.p-nav-footer {
+  gap: 24px;
+  white-space: nowrap;
+
+  @include breakpoint(tablet) {
+    display: flex;
+    flex-direction: row;
+  }
+  &__list {
+    &--sub {
+      display: flex;
+      flex-direction: column;
+      margin-left: 8px;
+    }
+  }
+}

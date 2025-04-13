@@ -1,0 +1,110 @@
+@use "../foundation/forwards" as *;
+
+.l-main {
+  &__kv {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - $sp-header-height);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    @include breakpoint(tablet) {
+      height: calc(100vh - $pc-header-height);
+    }
+  }
+
+  &__about {
+    position: relative;
+    padding: 100px 4.27%;
+  }
+
+  &__recommend {
+    position: relative;
+    background-image: url("../images/Yagasuri.jpeg");
+    padding: 80px 0;
+  }
+
+  &__menu {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    @include breakpoint(tablet) {
+      margin-top: 150px;
+      margin-bottom: 150px;
+    }
+  }
+
+  &__gallary {
+    overflow: hidden;
+  }
+
+  &__feature {
+    background-image: url("../images/Yagasuri.jpeg");
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    transform-origin: center;
+  }
+  &__news {
+    padding: 100px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__info {
+    padding: 0 0 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint(tablet) {
+      padding: 0 4.27% 100px;
+    }
+  }
+}
+
+//vision
+.l-main {
+  &__feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin-bottom: 100px;
+  }
+}
+
+//menu
+.l-main {
+  &__menu-list {
+    margin: 100px auto;
+    max-width: 1200px;
+    margin-bottom: 100px;
+    padding: 0 4.27%;
+  }
+
+  &__menu {
+    margin-bottom: 100px;
+  }
+}
+
+//product
+.l-main {
+  &__product {
+    background-size: 50%;
+    margin-bottom: 100px;
+  }
+}
+
+//history
+.l-main {
+  &__introduction {
+    margin: 100px 0 100px ;
+  }
+
+  & .p-history{
+    margin: 0 auto 100px 0;
+  }
+}

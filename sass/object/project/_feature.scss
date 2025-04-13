@@ -1,0 +1,50 @@
+@use "../../foundation/forwards" as *;
+
+.p-feature {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  max-width: 960px;
+  @include breakpoint(tablet) {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
+  }
+  &__img {
+    width: 100%;
+    height: 300px;
+    @include breakpoint(tablet) {
+      flex: 6;
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding: 0 4.27%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    @include breakpoint(tablet) {
+      flex: 4;
+      max-width: 400px;
+      padding: 0 24px 0 0;
+    }
+
+    @include breakpoint(pc) {
+      max-width: 580px;
+    }
+
+    &--vision {
+      @include breakpoint(tablet) {
+        padding: 0 0 0 24px;
+      }
+    }
+  }
+}
+
+

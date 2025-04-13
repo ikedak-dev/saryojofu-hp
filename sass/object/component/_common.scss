@@ -1,0 +1,213 @@
+@use "../../foundation/forwards" as *;
+
+.c-date {
+  font-size: $font-size-xs;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.c-news-text {
+  display: inline-block; // ← 追加
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70%;
+
+  &.c-hover {
+    &:hover {
+      border-bottom: 1px solid $c-white;
+    }
+  }
+}
+
+.c-h1 {
+  font-size: $font-size-lg;
+  font-weight: normal;
+  writing-mode: vertical-rl;
+  @include breakpoint(tablet) {
+    font-size: $font-size-xl;
+  }
+}
+
+.c-h2 {
+  font-size: $font-size-lg;
+  font-weight: normal;
+  @include breakpoint(tablet) {
+    font-size: $font-size-xl;
+  }
+
+  &--same {
+    @include breakpoint(tablet) {
+      font-size: $font-size-lg;
+    }
+  }
+  &--center {
+    text-align: center;
+  }
+}
+
+.c-h3 {
+  font-size: $font-size-md;
+  font-weight: normal;
+}
+.c-desc {
+  line-height: 1.75;
+}
+
+.c-leading {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  &__ruby {
+    font-family: "Shippori Mincho", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  &__title {
+    font-size: $font-size-lg;
+    font-weight: normal;
+    position: relative;
+
+    @include breakpoint(tablet) {
+      &--left-line {
+        &::before {
+          position: absolute;
+          content: "";
+          display: block;
+          width: 50px;
+          height: 1px;
+          background-color: $c-black;
+          top: 12px;
+          left: -55px;
+        }
+      }
+
+      &--right-line {
+        &::after {
+          position: absolute;
+          content: "";
+          display: block;
+          width: 50px;
+          height: 1px;
+          background-color: $c-black;
+          top: 12px;
+          right: -55px;
+        }
+      }
+    }
+  }
+
+  &__desc {
+    margin-top: 8px;
+  }
+  &--right-aligned {
+    text-align: right;
+  }
+}
+
+@mixin menu-color($color) {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 15px;
+  margin-top: -10px;
+  background-color: $color;
+}
+
+.c-menu-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  &__title {
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 50px;
+      height: 1px;
+      background-color: $c-black;
+      top: 16px;
+      left: -55px;
+    }
+    &--limited {
+      &::after {
+        @include menu-color($c-wa-green);
+      }
+    }
+
+    &--yakigashi {
+      &::after {
+        @include menu-color($c-wa-orenge);
+      }
+    }
+    &--nerigashi {
+      &::after {
+        @include menu-color($c-wa-purple);
+      }
+    }
+    &--hoshigashi {
+      &::after {
+        @include menu-color($c-wa-beige);
+      }
+    }
+    &--mochigashi {
+      &::after {
+        @include menu-color($c-wa-gray);
+      }
+    }
+    &--gift {
+      &::after {
+        @include menu-color($c-wa-pink);
+      }
+    }
+  }
+}
+
+.c-copyright {
+  font-size: $font-size-sm;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c-arrow {
+  fill: $c-black;
+}
+
+.c-text-side-line {
+  &::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background-color: $c-black;
+    position: absolute;
+    top: 12px;
+    left: -80px;
+
+    @include breakpoint(tablet) {
+      left: -75px;
+    }
+  }
+}
+
+.c-price {
+  font-size: $font-size-md;
+  &::before {
+    content: "￥";
+  }
+}
+.c-tax {
+  font-size: $font-size-sm;
+  margin-left: 4px;
+  vertical-align: bottom;
+}
+
+.c-history-title {
+  display: block;
+  font-size: $font-size-md;
+  margin-bottom: 8px;
+}

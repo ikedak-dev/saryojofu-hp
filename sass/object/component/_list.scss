@@ -1,0 +1,73 @@
+@use "../../foundation/forwards" as *;
+
+.c-nav {
+  &__list {
+    display: flex;
+    @include breakpoint(sp) {
+      flex-direction: column;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: 2px 0;
+   
+    &--header{
+
+      @include breakpoint(sp) {
+        font-size: $font-size-md;
+      }
+    }
+    &--sub {
+      display: inline-block;
+      &::before{
+        content: "-";
+        margin-right: 8px;
+      }
+      @include breakpoint(table) {
+        background-color: #e0e0e0;
+      }
+    }
+  }
+
+  &__toggle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__arrow{
+    color:$c-black;
+    @include breakpoint(sp) {
+      color:$c-white;
+    }
+
+    transition: transform 0.5s ease;
+    &.is-active {
+      transform: rotate(180deg);
+    }
+  }
+  &__link{
+    border-bottom: 1px solid transparent;
+    &:hover{
+      border-bottom: 1px solid $c-black-70;
+    }
+
+  }
+}
+
+.c-news-list{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.c-news-item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border-bottom: 1px $c-black solid;
+  padding-bottom: 4px;
+  height: 24px;
+}

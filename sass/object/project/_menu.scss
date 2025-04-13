@@ -1,0 +1,28 @@
+@use "../../foundation/forwards" as *;
+
+.p-menu {
+  &__leading{
+    margin-bottom: 40px;
+
+    &--center{
+      text-align: center;
+    }
+  }
+  &__list {
+    margin: 64px auto 0;
+    padding: 0 4.25%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    max-width: 1250px;
+
+    &--sub{
+      overflow: hidden; 
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+  }
+}

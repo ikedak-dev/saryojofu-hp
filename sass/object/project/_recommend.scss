@@ -1,0 +1,11 @@
+@use "../../foundation/forwards" as *;
+
+.p-recommend {
+    &__leading{
+        text-align: center;
+    }
+
+    &__products{
+        margin-top: 40px;
+    }
+}

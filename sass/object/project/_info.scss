@@ -1,0 +1,28 @@
+@use "../../foundation/forwards" as *;
+
+.p-info {
+  max-width: 1000px;
+  width: 100%;
+  &__leading {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  &__content {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    @include breakpoint(tablet) {
+      gap: 24px;
+    }
+    @include breakpoint(pc) {
+      gap: 50px;
+    }
+    @include breakpoint(tablet) {
+      flex-direction: row;
+    }
+  }
+}

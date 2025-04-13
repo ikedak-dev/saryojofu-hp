@@ -1,0 +1,39 @@
+@use "../foundation/forwards" as *;
+
+.l-footer {
+  background-color: $c-gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 10%;
+  gap: 24px;
+
+  @include breakpoint(tablet) {
+    padding: 32px;
+  }
+  &__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__logo {
+    width: 170px;
+    @include breakpoint(tablet) {
+      width: 300px;
+    }
+  }
+
+  &__nav {
+    margin-right: auto;
+    @include breakpoint(tablet) {
+      margin: 0 auto;
+    }
+  }
+
+  &__copyright {
+    margin-top: 24px;
+  }
+}

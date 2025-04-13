@@ -1,0 +1,41 @@
+@use "forwards" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.6rem;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+input {
+  cursor: pointer;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+

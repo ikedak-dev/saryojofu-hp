@@ -1,0 +1,23 @@
+@use "../../foundation/forwards" as *;
+
+.p-news {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+
+  &__leading {
+    text-align: center;
+  }
+
+  &__list {
+    width: 100%;
+    @include breakpoint(tablet) {
+      max-width: 70%;
+    }
+
+    @include breakpoint(pc) {
+      max-width: 60%;
+    }
+  }
+}

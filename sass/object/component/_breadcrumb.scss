@@ -1,0 +1,12 @@
+@use "../../foundation/forwards" as *;
+
+.c-breadcrumb {
+  margin: 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+
+  @include breakpoint(tablet) {
+    margin: 16px 32px;
+  }
+}

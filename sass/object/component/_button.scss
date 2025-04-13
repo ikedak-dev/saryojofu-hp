@@ -1,0 +1,64 @@
+@use "../../foundation/forwards" as *;
+
+.c-hamburger {
+  position: relative;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.c-hamburger__line {
+  display: block;
+  height: 2px;
+  background-color: $c-black-line;
+  transition: all 0.4s;
+
+  &.is-active {
+    background-color: $c-white;
+  }
+}
+
+.c-hamburger__line:nth-of-type(1) {
+  margin-bottom: 8px;
+}
+.c-hamburger__line:nth-of-type(2) {
+  margin-bottom: 8px;
+}
+.c-hamburger__line:nth-of-type(3) {
+}
+
+.c-hamburger.is-active .c-hamburger__line:nth-of-type(1) {
+  transform: translateY(10px) rotate(-45deg);
+}
+.c-hamburger.is-active .c-hamburger__line:nth-of-type(2) {
+  opacity: 0;
+}
+.c-hamburger.is-active .c-hamburger__line:nth-of-type(3) {
+  transform: translateY(-10px) rotate(45deg);
+}
+
+.c-news-tag {
+  background-color: $c-white;
+  border-radius: 10px;
+  padding: 4px 12px;
+}
+
+.c-detail-btn {
+  border: 1px solid $c-black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background-color: transparent;
+  width: 170px;
+  height: 42px;
+
+  &:hover {
+    background-color: $c-black;
+    color: $c-white;
+
+    & .c-arrow{
+      fill: $c-white;
+    }
+  }
+}

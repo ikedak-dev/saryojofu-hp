@@ -1,0 +1,30 @@
+@use "../../foundation/forwards" as *;
+
+.pagenavi {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.wp-pagenavi {
+  display: flex;
+  text-align: center;
+  & span,
+  a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pages {
+    display: none;
+  }
+}
+
+.current {
+  border: none;
+  background-color: $c-black;
+  color: $c-white;
+}
