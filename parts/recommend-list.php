@@ -3,7 +3,6 @@ $args = array(
     'post_type' => 'products',
     'posts_per_page' => 6,
     'category_name' => 'recommend',
-
 );
 $recommend_query = new WP_Query($args);
 if ($recommend_query->have_posts()) {

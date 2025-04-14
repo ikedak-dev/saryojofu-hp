@@ -58,3 +58,9 @@ function include_products_in_category($query)
 }
 add_action('pre_get_posts', 'include_products_in_category');
 
+add_filter('user_has_cap','allow_unfiltered_html',10,3);
+
+function allow_unfiltered_html($allcaps, $cap, $args ){
+	$allcaps['unfiltered_html']=$allcaps['edit_posts'];
+	return($allcaps);
+}
